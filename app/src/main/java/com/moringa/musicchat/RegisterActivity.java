@@ -39,7 +39,7 @@ public class RegisterActivity extends AppCompatActivity {
         register.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-               // Toast.makeText(RegisterActivity.this,"You have succesfully registered welcome", Toast.LENGTH_LONG).show();
+                // Toast.makeText(RegisterActivity.this,"You have succesfully registered welcome", Toast.LENGTH_LONG).show();
                 SetValidation();
             }
         });

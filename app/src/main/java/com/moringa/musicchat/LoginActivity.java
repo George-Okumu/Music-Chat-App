@@ -13,37 +13,30 @@ import android.widget.Toast;
 
 import com.google.android.material.textfield.TextInputLayout;
 
-import butterknife.BindView;
-import butterknife.ButterKnife;
-
 public class LoginActivity extends AppCompatActivity {
-    @BindView(R.id.email) EditText email;
-    @BindView(R.id.password) EditText password;
-    @BindView(R.id.login) Button login;
-    @BindView(R.id.register) TextView register;
-    @BindView(R.id.emailError) TextInputLayout emailError;
-    @BindView(R.id.passwordError) TextInputLayout passwordError;
+    private EditText email;
+    private EditText password;
+    TextView register;
+    private Button login;
     boolean isEmailValid, isPasswordValid;
+    TextInputLayout emailError, passwordError;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_login);
-        ButterKnife.bind(this);
+        email = (EditText) findViewById(R.id.email);
+        password = (EditText) findViewById(R.id.password);
+        login = (Button) findViewById(R.id.login);
+        register = (TextView) findViewById(R.id.register);
+        emailError = (TextInputLayout) findViewById(R.id.emailError);
+        passwordError = (TextInputLayout) findViewById(R.id.passwordError);
 
         login.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 //Toast.makeText(LoginActivity.this,"Thank you for logging in" ,Toast.LENGTH_LONG).show();
                 SetValidation();
-            }
-        });
-
-        login.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                Intent intent = new Intent(getApplicationContext(), HomeActivity.class);
-                startActivity(intent);
             }
         });
         register.setOnClickListener(new View.OnClickListener() {
