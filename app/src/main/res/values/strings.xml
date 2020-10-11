@@ -11,4 +11,5 @@
     <string name="error_invalid_email">Invalid email</string>
     <string name="password_error">Incorrect password</string>
     <string name="error_invalid_password">Enter correct password</string>
+    <string name="not_register"></string>
 </resources>
