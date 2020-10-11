@@ -7,9 +7,12 @@
     <string name="title_addInformation">Add</string>
     <string name="register_new">Click here to register</string>
     <string name="login">Login</string>
+    <string name="register">Register</string>
     <string name="email_error">Enter Correct email</string>
     <string name="error_invalid_email">Invalid email</string>
     <string name="password_error">Incorrect password</string>
-    <string name="error_invalid_password">Enter correct password</string>
+    <string name="error_invalid_password">Please enter a valid password</string>
     <string name="not_register"></string>
+    <string name="phone_error">Please enter your phone number</string>
+    <string name="name_error">Please enter your name</string>
 </resources>

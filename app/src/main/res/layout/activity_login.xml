@@ -9,7 +9,8 @@
     <RelativeLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_gravity="center">
+        android:layout_gravity="center"
+        android:layout_marginTop="50dp">
 
         <com.google.android.material.card.MaterialCardView
             xmlns:Card_View="http://schemas.android.com/apk/res-auto"
@@ -38,6 +39,7 @@
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:layout_marginTop="10dp"
+                        android:hint="Enter Email"
                         android:inputType="textEmailAddress"
                         android:maxLines="1"
                         android:paddingStart="5dp"
@@ -56,6 +58,7 @@
                         android:id="@+id/password"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
+                        android:hint="Enter Password"
                         android:layout_marginTop="10dp"
                         android:inputType="textPassword"
                         android:maxLines="1"
@@ -68,6 +71,7 @@
                     android:id="@+id/login"
                     android:layout_width="match_parent"
                     android:layout_height="50dp"
+                    android:background="@drawable/button_gradient"
                     android:layout_margin="20dp"
                     android:text="@string/login"
                     android:textColor="@android:color/white"
@@ -92,8 +96,8 @@
         android:layout_width="100dp"
         android:layout_height="100dp"
         android:layout_centerHorizontal="true"
-        android:layout_marginTop="-50dp"
+        android:layout_marginTop="50dp"
         android:padding="15dp"
-        app:srcCompat="@drawable/baseline_account_circle_black_18dp"/>
+        app:srcCompat="@drawable/profile"/>
 
 </RelativeLayout>
