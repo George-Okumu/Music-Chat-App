@@ -7,4 +7,8 @@
     <string name="title_addInformation">Add</string>
     <string name="register_new">Click here to register</string>
     <string name="login">Login</string>
+    <string name="email_error">Enter Correct email</string>
+    <string name="error_invalid_email">Invalid email</string>
+    <string name="password_error">Incorrect password</string>
+    <string name="error_invalid_password">Enter correct password</string>
 </resources>

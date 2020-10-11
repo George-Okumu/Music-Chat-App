@@ -36,6 +36,7 @@ public class LoginActivity extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 //Toast.makeText(LoginActivity.this,"Thank you for logging in" ,Toast.LENGTH_LONG).show();
+                SetValidation();
             }
         });
         register.setOnClickListener(new View.OnClickListener() {
@@ -48,5 +49,34 @@ public class LoginActivity extends AppCompatActivity {
         });
 
     }
+    private void SetValidation() {
+        if (email.getText().toString().isEmpty()) {
+            emailError.setError(getResources().getString(R.string.email_error));
+            isEmailValid = false;
+        } else if (!Patterns.EMAIL_ADDRESS.matcher(email.getText().toString()).matches()) {
+            emailError.setError(getResources().getString(R.string.error_invalid_email));
+            isEmailValid = false;
+        } else  {
+            isEmailValid = true;
+            emailError.setErrorEnabled(false);
+        }
+
+        // Checking for a valid password.
+        if (password.getText().toString().isEmpty()) {
+            passwordError.setError(getResources().getString(R.string.password_error));
+            isPasswordValid = false;
+        } else if (password.getText().length() < 8) {
+            passwordError.setError(getResources().getString(R.string.error_invalid_password));
+            isPasswordValid = false;
+        } else  {
+            isPasswordValid = true;
+            passwordError.setErrorEnabled(false);
+        }
+
+        if (isEmailValid && isPasswordValid) {
+            Toast.makeText(getApplicationContext(), "Successfully", Toast.LENGTH_SHORT).show();
+        }
+    }
+
 
 }
