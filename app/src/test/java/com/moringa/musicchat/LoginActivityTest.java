@@ -14,19 +14,19 @@ import static org.robolectric.Shadows.shadowOf;
 
 @RunWith(RobolectricTestRunner.class)
 public class LoginActivityTest {
-//    private LoginActivity activity;
-//
-//    @Before
-//    public void setup(){
-//        activity = Robolectric.setupActivity(LoginActivity.class);
-//    }
+    private LoginActivity activity;
 
-//    @Test
-//    public void clickingLogin_shouldStartHomeActivity() {
-//        LoginActivity activity = Robolectric.setupActivity(LoginActivity.class);
-//        activity.findViewById(R.id.login).performClick();
-//        Intent expectedIntent = new Intent(activity, HomeActivity.class);
-//        Intent actual = shadowOf(RuntimeEnvironment.application).getNextStartedActivity();
-//        assertEquals(expectedIntent.getComponent(), actual.getComponent());
-//    }
+    @Before
+    public void setup(){
+        activity = Robolectric.setupActivity(LoginActivity.class);
+    }
+
+    @Test
+    public void clickingLogin_shouldStartHomeActivity() {
+        LoginActivity activity = Robolectric.setupActivity(LoginActivity.class);
+        activity.findViewById(R.id.login).performClick();
+        Intent expectedIntent = new Intent(activity, HomeActivity.class);
+        Intent actual = shadowOf(RuntimeEnvironment.application).getNextStartedActivity();
+        assertEquals(expectedIntent.getComponent(), actual.getComponent());
+    }
 }
