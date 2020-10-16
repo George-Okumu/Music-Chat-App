@@ -20,6 +20,9 @@ android {
             proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
         }
     }
+    buildTypes.each {
+        it.buildConfigField 'String', 'DEEZER_API_KEY',  DeezerApiKey
+    }
     testOptions {
         unitTests {
             includeAndroidResources = true

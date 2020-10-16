@@ -35,17 +35,19 @@ public class LoginActivity extends AppCompatActivity {
         login.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                //Toast.makeText(LoginActivity.this,"Thank you for logging in" ,Toast.LENGTH_LONG).show();
                 SetValidation();
-            }
-        });
-        login.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
                 Intent intent = new Intent(getApplicationContext(), HomeActivity.class);
                 startActivity(intent);
             }
         });
+
+//        login.setOnClickListener(new View.OnClickListener() {
+//            @Override
+//            public void onClick(View v) {
+//                //Toast.makeText(LoginActivity.this,"Thank you for logging in" ,Toast.LENGTH_LONG).show();
+//
+//            }
+//        });
         register.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
