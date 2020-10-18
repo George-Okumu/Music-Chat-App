@@ -8,34 +8,34 @@ public class Album {
 
     @SerializedName("id")
     @Expose
-    public Integer id;
+    private Integer id;
     @SerializedName("title")
     @Expose
-    public String title;
+    private String title;
     @SerializedName("cover")
     @Expose
-    public String cover;
+    private String cover;
     @SerializedName("cover_small")
     @Expose
-    public String coverSmall;
+    private String coverSmall;
     @SerializedName("cover_medium")
     @Expose
-    public String coverMedium;
+    private String coverMedium;
     @SerializedName("cover_big")
     @Expose
-    public String coverBig;
+    private String coverBig;
     @SerializedName("cover_xl")
     @Expose
-    public String coverXl;
+    private String coverXl;
     @SerializedName("md5_image")
     @Expose
-    public String md5Image;
+    private String md5Image;
     @SerializedName("tracklist")
     @Expose
-    public String tracklist;
+    private String tracklist;
     @SerializedName("type")
     @Expose
-    public String type;
+    private String type;
 
     /**
      * No args constructor for use in serialization
@@ -68,6 +68,86 @@ public class Album {
         this.coverXl = coverXl;
         this.md5Image = md5Image;
         this.tracklist = tracklist;
+        this.type = type;
+    }
+
+    public Integer getId() {
+        return id;
+    }
+
+    public void setId(Integer id) {
+        this.id = id;
+    }
+
+    public String getTitle() {
+        return title;
+    }
+
+    public void setTitle(String title) {
+        this.title = title;
+    }
+
+    public String getCover() {
+        return cover;
+    }
+
+    public void setCover(String cover) {
+        this.cover = cover;
+    }
+
+    public String getCoverSmall() {
+        return coverSmall;
+    }
+
+    public void setCoverSmall(String coverSmall) {
+        this.coverSmall = coverSmall;
+    }
+
+    public String getCoverMedium() {
+        return coverMedium;
+    }
+
+    public void setCoverMedium(String coverMedium) {
+        this.coverMedium = coverMedium;
+    }
+
+    public String getCoverBig() {
+        return coverBig;
+    }
+
+    public void setCoverBig(String coverBig) {
+        this.coverBig = coverBig;
+    }
+
+    public String getCoverXl() {
+        return coverXl;
+    }
+
+    public void setCoverXl(String coverXl) {
+        this.coverXl = coverXl;
+    }
+
+    public String getMd5Image() {
+        return md5Image;
+    }
+
+    public void setMd5Image(String md5Image) {
+        this.md5Image = md5Image;
+    }
+
+    public String getTracklist() {
+        return tracklist;
+    }
+
+    public void setTracklist(String tracklist) {
+        this.tracklist = tracklist;
+    }
+
+    public String getType() {
+        return type;
+    }
+
+    public void setType(String type) {
         this.type = type;
     }
 

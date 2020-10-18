@@ -8,52 +8,52 @@ public class Datum {
 
     @SerializedName("id")
     @Expose
-    public Integer id;
+    private Integer id;
     @SerializedName("readable")
     @Expose
-    public Boolean readable;
+    private Boolean readable;
     @SerializedName("title")
     @Expose
-    public String title;
+    private String title;
     @SerializedName("title_short")
     @Expose
-    public String titleShort;
+    private String titleShort;
     @SerializedName("title_version")
     @Expose
-    public String titleVersion;
+    private String titleVersion;
     @SerializedName("link")
     @Expose
-    public String link;
+    private String link;
     @SerializedName("duration")
     @Expose
-    public Integer duration;
+    private Integer duration;
     @SerializedName("rank")
     @Expose
-    public Integer rank;
+    private Integer rank;
     @SerializedName("explicit_lyrics")
     @Expose
-    public Boolean explicitLyrics;
+    private Boolean explicitLyrics;
     @SerializedName("explicit_content_lyrics")
     @Expose
-    public Integer explicitContentLyrics;
+    private Integer explicitContentLyrics;
     @SerializedName("explicit_content_cover")
     @Expose
-    public Integer explicitContentCover;
+    private Integer explicitContentCover;
     @SerializedName("preview")
     @Expose
-    public String preview;
+    private String preview;
     @SerializedName("md5_image")
     @Expose
-    public String md5Image;
+    private String md5Image;
     @SerializedName("artist")
     @Expose
-    public Artist artist;
+    private Artist artist;
     @SerializedName("album")
     @Expose
-    public Album album;
+    private Album album;
     @SerializedName("type")
     @Expose
-    public String type;
+    private String type;
 
     /**
      * No args constructor for use in serialization
@@ -98,6 +98,134 @@ public class Datum {
         this.md5Image = md5Image;
         this.artist = artist;
         this.album = album;
+        this.type = type;
+    }
+
+    public Integer getId() {
+        return id;
+    }
+
+    public void setId(Integer id) {
+        this.id = id;
+    }
+
+    public Boolean getReadable() {
+        return readable;
+    }
+
+    public void setReadable(Boolean readable) {
+        this.readable = readable;
+    }
+
+    public String getTitle() {
+        return title;
+    }
+
+    public void setTitle(String title) {
+        this.title = title;
+    }
+
+    public String getTitleShort() {
+        return titleShort;
+    }
+
+    public void setTitleShort(String titleShort) {
+        this.titleShort = titleShort;
+    }
+
+    public String getTitleVersion() {
+        return titleVersion;
+    }
+
+    public void setTitleVersion(String titleVersion) {
+        this.titleVersion = titleVersion;
+    }
+
+    public String getLink() {
+        return link;
+    }
+
+    public void setLink(String link) {
+        this.link = link;
+    }
+
+    public Integer getDuration() {
+        return duration;
+    }
+
+    public void setDuration(Integer duration) {
+        this.duration = duration;
+    }
+
+    public Integer getRank() {
+        return rank;
+    }
+
+    public void setRank(Integer rank) {
+        this.rank = rank;
+    }
+
+    public Boolean getExplicitLyrics() {
+        return explicitLyrics;
+    }
+
+    public void setExplicitLyrics(Boolean explicitLyrics) {
+        this.explicitLyrics = explicitLyrics;
+    }
+
+    public Integer getExplicitContentLyrics() {
+        return explicitContentLyrics;
+    }
+
+    public void setExplicitContentLyrics(Integer explicitContentLyrics) {
+        this.explicitContentLyrics = explicitContentLyrics;
+    }
+
+    public Integer getExplicitContentCover() {
+        return explicitContentCover;
+    }
+
+    public void setExplicitContentCover(Integer explicitContentCover) {
+        this.explicitContentCover = explicitContentCover;
+    }
+
+    public String getPreview() {
+        return preview;
+    }
+
+    public void setPreview(String preview) {
+        this.preview = preview;
+    }
+
+    public String getMd5Image() {
+        return md5Image;
+    }
+
+    public void setMd5Image(String md5Image) {
+        this.md5Image = md5Image;
+    }
+
+    public Artist getArtist() {
+        return artist;
+    }
+
+    public void setArtist(Artist artist) {
+        this.artist = artist;
+    }
+
+    public Album getAlbum() {
+        return album;
+    }
+
+    public void setAlbum(Album album) {
+        this.album = album;
+    }
+
+    public String getType() {
+        return type;
+    }
+
+    public void setType(String type) {
         this.type = type;
     }
 

@@ -8,34 +8,34 @@ public class Artist {
 
     @SerializedName("id")
     @Expose
-    public Integer id;
+    private Integer id;
     @SerializedName("name")
     @Expose
-    public String name;
+    private String name;
     @SerializedName("link")
     @Expose
-    public String link;
+    private String link;
     @SerializedName("picture")
     @Expose
-    public String picture;
+    private String picture;
     @SerializedName("picture_small")
     @Expose
-    public String pictureSmall;
+    private String pictureSmall;
     @SerializedName("picture_medium")
     @Expose
-    public String pictureMedium;
+    private String pictureMedium;
     @SerializedName("picture_big")
     @Expose
-    public String pictureBig;
+    private String pictureBig;
     @SerializedName("picture_xl")
     @Expose
-    public String pictureXl;
+    private String pictureXl;
     @SerializedName("tracklist")
     @Expose
-    public String tracklist;
+    private String tracklist;
     @SerializedName("type")
     @Expose
-    public String type;
+    private String type;
 
     /**
      * No args constructor for use in serialization
@@ -68,6 +68,86 @@ public class Artist {
         this.pictureBig = pictureBig;
         this.pictureXl = pictureXl;
         this.tracklist = tracklist;
+        this.type = type;
+    }
+
+    public Integer getId() {
+        return id;
+    }
+
+    public void setId(Integer id) {
+        this.id = id;
+    }
+
+    public String getName() {
+        return name;
+    }
+
+    public void setName(String name) {
+        this.name = name;
+    }
+
+    public String getLink() {
+        return link;
+    }
+
+    public void setLink(String link) {
+        this.link = link;
+    }
+
+    public String getPicture() {
+        return picture;
+    }
+
+    public void setPicture(String picture) {
+        this.picture = picture;
+    }
+
+    public String getPictureSmall() {
+        return pictureSmall;
+    }
+
+    public void setPictureSmall(String pictureSmall) {
+        this.pictureSmall = pictureSmall;
+    }
+
+    public String getPictureMedium() {
+        return pictureMedium;
+    }
+
+    public void setPictureMedium(String pictureMedium) {
+        this.pictureMedium = pictureMedium;
+    }
+
+    public String getPictureBig() {
+        return pictureBig;
+    }
+
+    public void setPictureBig(String pictureBig) {
+        this.pictureBig = pictureBig;
+    }
+
+    public String getPictureXl() {
+        return pictureXl;
+    }
+
+    public void setPictureXl(String pictureXl) {
+        this.pictureXl = pictureXl;
+    }
+
+    public String getTracklist() {
+        return tracklist;
+    }
+
+    public void setTracklist(String tracklist) {
+        this.tracklist = tracklist;
+    }
+
+    public String getType() {
+        return type;
+    }
+
+    public void setType(String type) {
         this.type = type;
     }
 

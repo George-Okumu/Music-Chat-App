@@ -9,13 +9,10 @@ public class DeezerMusicSearchResponse {
 
     @SerializedName("data")
     @Expose
-    public List<Datum> data = null;
+    private List<Datum> data = null;
     @SerializedName("total")
     @Expose
-    public Integer total;
-    @SerializedName("next")
-    @Expose
-    public String next;
+    private Integer total;
 
     /**
      * No args constructor for use in serialization
@@ -26,15 +23,29 @@ public class DeezerMusicSearchResponse {
 
     /**
      * 
-     * @param next
      * @param total
      * @param data
      */
-    public DeezerMusicSearchResponse(List<Datum> data, Integer total, String next) {
+    public DeezerMusicSearchResponse(List<Datum> data, Integer total) {
         super();
         this.data = data;
         this.total = total;
-        this.next = next;
+    }
+
+    public List<Datum> getData() {
+        return data;
+    }
+
+    public void setData(List<Datum> data) {
+        this.data = data;
+    }
+
+    public Integer getTotal() {
+        return total;
+    }
+
+    public void setTotal(Integer total) {
+        this.total = total;
     }
 
 }

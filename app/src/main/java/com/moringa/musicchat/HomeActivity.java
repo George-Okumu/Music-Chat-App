@@ -27,9 +27,6 @@ public class HomeActivity extends AppCompatActivity implements View.OnClickListe
         //set search button on clickListener
         mSearchMusicButton.setOnClickListener(this);
 
-//        this.listView = (ListView) findViewById(R.id.listview);
-//        ArrayAdapter<String> adapter = new ArrayAdapter<String>(this,android.R.layout.activity_list_item, messages);
-//        listView.setAdapter(adapter);
 
     }
 

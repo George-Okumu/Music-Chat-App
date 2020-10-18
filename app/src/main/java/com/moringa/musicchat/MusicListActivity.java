@@ -2,12 +2,14 @@ package com.moringa.musicchat;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+
 import android.content.Intent;
 import android.os.Bundle;
 import android.widget.TextView;
 
 import butterknife.BindView;
 import butterknife.ButterKnife;
+import retrofit2.Call;
 
 public class MusicListActivity extends AppCompatActivity {
     @BindView(R.id.musicTextView) TextView mMusicTextView;
@@ -22,5 +24,10 @@ public class MusicListActivity extends AppCompatActivity {
         Intent intent = getIntent();
         String artist = intent.getStringExtra("artist");
         mMusicTextView.setText("Here are all music of: " + artist);
+
+        //Making a request to the Api
+        MusicApi client = MusicClient.getClient();
+
+        Call<DeezerMusicSearchResponse> call = client.getMusic(artist);
     }
 }
