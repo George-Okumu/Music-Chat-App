@@ -6,13 +6,18 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.widget.TextView;
 
+import butterknife.BindView;
+import butterknife.ButterKnife;
+
 public class MusicListActivity extends AppCompatActivity {
-    private TextView mMusicTextView;
+    @BindView(R.id.musicTextView) TextView mMusicTextView;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_music_list);
+
+        ButterKnife.bind(this);
         //gathering information from the home activity
         Intent intent = getIntent();
         String artist = intent.getStringExtra("artist");
