@@ -1,13 +1,14 @@
 package com.moringa.musicchat;
 
+import com.moringa.musicchat.DeezerMusicSearchResponse;
+
 import retrofit2.Call;
 import retrofit2.http.GET;
 import retrofit2.http.Query;
 
 public interface MusicApi {
-    @GET("search?q=artist:")
+    @GET("search?q=King Kaka:")
     Call<DeezerMusicSearchResponse> getMusic(
-            @Query("artist") String artist
-            //@Query("term")  String term
+            @Query("artists") String artist
     );
 }

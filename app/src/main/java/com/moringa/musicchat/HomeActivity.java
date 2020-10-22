@@ -5,10 +5,8 @@ import androidx.appcompat.app.AppCompatActivity;
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
-import android.widget.ArrayAdapter;
 import android.widget.Button;
 import android.widget.EditText;
-import android.widget.ListView;
 
 import butterknife.BindView;
 import butterknife.ButterKnife;
@@ -35,7 +33,7 @@ public class HomeActivity extends AppCompatActivity implements View.OnClickListe
         if(v == mSearchMusicButton){
             String artist = mSearchMusicText.getText().toString();
             Intent intent = new Intent(HomeActivity.this, MusicListActivity.class);
-            intent.putExtra("artist", artist);
+            intent.putExtra("artists", artist);
             startActivity(intent);
         }
     }

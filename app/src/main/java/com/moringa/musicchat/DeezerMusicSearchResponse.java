@@ -1,4 +1,3 @@
-
 package com.moringa.musicchat;
 
 import java.util.List;
@@ -9,27 +8,32 @@ public class DeezerMusicSearchResponse {
 
     @SerializedName("data")
     @Expose
-    private List<Datum> data = null;
+    private List<Datum> data;
     @SerializedName("total")
     @Expose
-    private Integer total;
+    private int total;
+    @SerializedName("next")
+    @Expose
+    private String next;
 
     /**
      * No args constructor for use in serialization
-     * 
+     *
      */
     public DeezerMusicSearchResponse() {
     }
 
     /**
-     * 
+     *
+     * @param next
      * @param total
      * @param data
      */
-    public DeezerMusicSearchResponse(List<Datum> data, Integer total) {
+    public DeezerMusicSearchResponse(List<Datum> data, int total, String next) {
         super();
         this.data = data;
         this.total = total;
+        this.next = next;
     }
 
     public List<Datum> getData() {
@@ -40,12 +44,20 @@ public class DeezerMusicSearchResponse {
         this.data = data;
     }
 
-    public Integer getTotal() {
+    public int getTotal() {
         return total;
     }
 
-    public void setTotal(Integer total) {
+    public void setTotal(int total) {
         this.total = total;
+    }
+
+    public String getNext() {
+        return next;
+    }
+
+    public void setNext(String next) {
+        this.next = next;
     }
 
 }

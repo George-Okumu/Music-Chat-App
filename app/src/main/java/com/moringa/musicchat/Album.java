@@ -1,14 +1,16 @@
-
 package com.moringa.musicchat;
 
 import com.google.gson.annotations.Expose;
 import com.google.gson.annotations.SerializedName;
 
+import org.parceler.Parcel;
+
+@Parcel
 public class Album {
 
     @SerializedName("id")
     @Expose
-    private Integer id;
+    private int id;
     @SerializedName("title")
     @Expose
     private String title;
@@ -39,13 +41,13 @@ public class Album {
 
     /**
      * No args constructor for use in serialization
-     * 
+     *
      */
     public Album() {
     }
 
     /**
-     * 
+     *
      * @param cover
      * @param coverSmall
      * @param coverBig
@@ -57,7 +59,7 @@ public class Album {
      * @param title
      * @param type
      */
-    public Album(Integer id, String title, String cover, String coverSmall, String coverMedium, String coverBig, String coverXl, String md5Image, String tracklist, String type) {
+    public Album(int id, String title, String cover, String coverSmall, String coverMedium, String coverBig, String coverXl, String md5Image, String tracklist, String type) {
         super();
         this.id = id;
         this.title = title;
@@ -71,11 +73,11 @@ public class Album {
         this.type = type;
     }
 
-    public Integer getId() {
+    public int getId() {
         return id;
     }
 
-    public void setId(Integer id) {
+    public void setId(int id) {
         this.id = id;
     }
 

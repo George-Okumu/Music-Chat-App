@@ -9,7 +9,7 @@ import okhttp3.Response;
 import retrofit2.Retrofit;
 import retrofit2.converter.gson.GsonConverterFactory;
 
-import static com.moringa.musicchat.Constants.DEEZER_API_KEY;
+//import static com.moringa.musicchat.Constants.DEEZER_API_KEY;
 import static com.moringa.musicchat.Constants.DEEZER_BASE_URL;
 
 public class MusicClient {
@@ -21,8 +21,7 @@ public class MusicClient {
                     .addInterceptor(new Interceptor() {
                         @Override
                         public Response intercept(Chain chain) throws IOException {
-                            Request newRequest  = chain.request().newBuilder()
-                                    .addHeader("Authorization", DEEZER_API_KEY)
+                            Request newRequest = chain.request().newBuilder()
                                     .build();
                             return chain.proceed(newRequest);
                         }

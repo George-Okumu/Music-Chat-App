@@ -4,41 +4,41 @@ package com.moringa.musicchat;
 import com.google.gson.annotations.Expose;
 import com.google.gson.annotations.SerializedName;
 
+import org.parceler.Parcel;
+
+@Parcel
 public class Datum {
 
     @SerializedName("id")
     @Expose
-    private Integer id;
+    private int id;
     @SerializedName("readable")
     @Expose
-    private Boolean readable;
+    private boolean readable;
     @SerializedName("title")
     @Expose
     private String title;
     @SerializedName("title_short")
     @Expose
     private String titleShort;
-    @SerializedName("title_version")
-    @Expose
-    private String titleVersion;
     @SerializedName("link")
     @Expose
     private String link;
     @SerializedName("duration")
     @Expose
-    private Integer duration;
+    private int duration;
     @SerializedName("rank")
     @Expose
-    private Integer rank;
+    private int rank;
     @SerializedName("explicit_lyrics")
     @Expose
-    private Boolean explicitLyrics;
+    private boolean explicitLyrics;
     @SerializedName("explicit_content_lyrics")
     @Expose
-    private Integer explicitContentLyrics;
+    private int explicitContentLyrics;
     @SerializedName("explicit_content_cover")
     @Expose
-    private Integer explicitContentCover;
+    private int explicitContentCover;
     @SerializedName("preview")
     @Expose
     private String preview;
@@ -54,16 +54,19 @@ public class Datum {
     @SerializedName("type")
     @Expose
     private String type;
+    @SerializedName("title_version")
+    @Expose
+    private String titleVersion;
 
     /**
      * No args constructor for use in serialization
-     * 
+     *
      */
     public Datum() {
     }
 
     /**
-     * 
+     *
      * @param readable
      * @param preview
      * @param artist
@@ -81,13 +84,12 @@ public class Datum {
      * @param id
      * @param explicitContentCover
      */
-    public Datum(Integer id, Boolean readable, String title, String titleShort, String titleVersion, String link, Integer duration, Integer rank, Boolean explicitLyrics, Integer explicitContentLyrics, Integer explicitContentCover, String preview, String md5Image, Artist artist, Album album, String type) {
+    public Datum(int id, boolean readable, String title, String titleShort, String link, int duration, int rank, boolean explicitLyrics, int explicitContentLyrics, int explicitContentCover, String preview, String md5Image, Artist artist, Album album, String type, String titleVersion) {
         super();
         this.id = id;
         this.readable = readable;
         this.title = title;
         this.titleShort = titleShort;
-        this.titleVersion = titleVersion;
         this.link = link;
         this.duration = duration;
         this.rank = rank;
@@ -99,21 +101,22 @@ public class Datum {
         this.artist = artist;
         this.album = album;
         this.type = type;
+        this.titleVersion = titleVersion;
     }
 
-    public Integer getId() {
+    public int getId() {
         return id;
     }
 
-    public void setId(Integer id) {
+    public void setId(int id) {
         this.id = id;
     }
 
-    public Boolean getReadable() {
+    public boolean isReadable() {
         return readable;
     }
 
-    public void setReadable(Boolean readable) {
+    public void setReadable(boolean readable) {
         this.readable = readable;
     }
 
@@ -133,14 +136,6 @@ public class Datum {
         this.titleShort = titleShort;
     }
 
-    public String getTitleVersion() {
-        return titleVersion;
-    }
-
-    public void setTitleVersion(String titleVersion) {
-        this.titleVersion = titleVersion;
-    }
-
     public String getLink() {
         return link;
     }
@@ -149,43 +144,43 @@ public class Datum {
         this.link = link;
     }
 
-    public Integer getDuration() {
+    public int getDuration() {
         return duration;
     }
 
-    public void setDuration(Integer duration) {
+    public void setDuration(int duration) {
         this.duration = duration;
     }
 
-    public Integer getRank() {
+    public int getRank() {
         return rank;
     }
 
-    public void setRank(Integer rank) {
+    public void setRank(int rank) {
         this.rank = rank;
     }
 
-    public Boolean getExplicitLyrics() {
+    public boolean isExplicitLyrics() {
         return explicitLyrics;
     }
 
-    public void setExplicitLyrics(Boolean explicitLyrics) {
+    public void setExplicitLyrics(boolean explicitLyrics) {
         this.explicitLyrics = explicitLyrics;
     }
 
-    public Integer getExplicitContentLyrics() {
+    public int getExplicitContentLyrics() {
         return explicitContentLyrics;
     }
 
-    public void setExplicitContentLyrics(Integer explicitContentLyrics) {
+    public void setExplicitContentLyrics(int explicitContentLyrics) {
         this.explicitContentLyrics = explicitContentLyrics;
     }
 
-    public Integer getExplicitContentCover() {
+    public int getExplicitContentCover() {
         return explicitContentCover;
     }
 
-    public void setExplicitContentCover(Integer explicitContentCover) {
+    public void setExplicitContentCover(int explicitContentCover) {
         this.explicitContentCover = explicitContentCover;
     }
 
@@ -227,6 +222,14 @@ public class Datum {
 
     public void setType(String type) {
         this.type = type;
+    }
+
+    public String getTitleVersion() {
+        return titleVersion;
+    }
+
+    public void setTitleVersion(String titleVersion) {
+        this.titleVersion = titleVersion;
     }
 
 }
